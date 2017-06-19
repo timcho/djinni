@@ -35,6 +35,7 @@ fi
 java \
     -Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled "${jvm_args[@]}" \
     -Djava.security.manager -Djava.security.policy="$base_dir/sbt.security.policy" \
+   # -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1080 \
     -jar "$base_dir/sbt-launch.jar" \
     -Dsbt.override.build.repos=true \
     -Dsbt.repository.config="$base_dir/sbt.resolvers.properties" \
